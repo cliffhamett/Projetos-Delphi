@@ -26,13 +26,7 @@ type
     btnCancelar: TSpeedButton;
     btnSair: TSpeedButton;
     txtMaskCnpj: TMaskEdit;
-    BindSourceDB1: TBindSourceDB;
-    BindingsList1: TBindingsList;
-    LinkControlToField1: TLinkControlToField;
     procedure FormCreate(Sender: TObject);
-    procedure btnNovoClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,25 +42,10 @@ implementation
 
 uses UnitConexaoBancoDeDados;
 
-procedure TFormCadastroFornecedor.btnNovoClick(Sender: TObject);
-begin
-  ConexoesBD.tbFornecedores.Insert;
-end;
-
-procedure TFormCadastroFornecedor.btnSairClick(Sender: TObject);
-begin
-  FormCadastroFornecedor.Close;
-end;
-
-procedure TFormCadastroFornecedor.FormClose(Sender: TObject;
-  var Action: TCloseAction);
-begin
-  action := caFree;
-end;
-
 procedure TFormCadastroFornecedor.FormCreate(Sender: TObject);
 begin
   txtMaskCnpj.EditMask := '99.999.999/9999-99';
+  txtMaskCnpj.Text := ConexoesBD.tbFornecedores.FieldByName('cnpj');
 end;
 
 end.

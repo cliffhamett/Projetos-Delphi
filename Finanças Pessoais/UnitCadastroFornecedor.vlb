@@ -2,53 +2,66 @@
 Coordinates=179,20,184,124
 
 [labelNomeFornecedor]
-Coordinates=324,10,142,58
+Coordinates=324,10,123,51
 
 [btnGravar]
-Coordinates=10,229,72,36
+Coordinates=10,229,63,33
 
 [btnSair]
-Coordinates=436,186,55,36
+Coordinates=436,186,49,33
 
 [PainelBotoes]
-Coordinates=295,125,90,58
+Coordinates=295,125,79,51
 
 [txtCodigo]
-Coordinates=364,186,69,36
+Coordinates=364,186,62,33
 
 [labelCodigo]
-Coordinates=212,125,83,58
+Coordinates=212,125,73,51
 
 [GroupBoxFornecedoresCadastrados]
-Coordinates=384,125,224,58
+Coordinates=384,125,195,51
 
 [DBGrid1]
-Coordinates=298,186,64,36
+Coordinates=298,186,56,33
 
 [DataModule1.DSFornecedores]
 Coordinates=178,1,191,36
 
 [btnCancelar]
-Coordinates=215,186,84,36
+Coordinates=215,186,73,33
 
 [labelCnpj]
-Coordinates=254,10,68,58
+Coordinates=254,10,60,51
 
 [btnExcluir]
-Coordinates=141,186,71,36
+Coordinates=141,186,64,33
 
 [txtNome]
-Coordinates=76,186,62,36
+Coordinates=76,186,55,33
 
 [GroupBoxInformacoesParaCadastro]
-Coordinates=10,125,222,58
+Coordinates=10,125,192,51
 
 [btnNovo]
-Coordinates=10,186,62,36
+Coordinates=10,186,56,33
 
 []
-Coordinates=84,77,91,36
+Coordinates=104,1,91,36
 
 [txtMaskCnpj]
-Coordinates=0,0,85,58
+Coordinates=160,10,75,51
+
+[ConexoesBD.DSFornecedores]
+Coordinates=581,1,163,33
+
+[ConexoesBD.tbFornecedores]
+Coordinates=540,10,159,33
+Visible=False
+
+[BindSourceDB1]
+Coordinates=10,0,142,123
+
+[BindingsList1]
+Coordinates=104,1,82,33
 

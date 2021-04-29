@@ -35,15 +35,11 @@ procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   RetornoMensagemDlg : integer;
 begin
-  RetornoMensagemDlg := Messagedlg('Tem certeza que deseja fechar o programa?', mtConfirmation, [mbYes, mbNo], 0);
+  RetornoMensagemDlg := Messagedlg('Tem certeza que seja fechar o programa?', mtConfirmation, [mbYes, mbNo], 0);
 
   if RetornoMensagemDlg = 6 then
   begin
     FormCadastroFornecedor.Close;
-  end
-  else
-  begin
-    FormCadastroFornecedor.Refresh;
   end;
 end;
 

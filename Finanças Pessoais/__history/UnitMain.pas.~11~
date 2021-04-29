@@ -40,10 +40,6 @@ begin
   if RetornoMensagemDlg = 6 then
   begin
     FormCadastroFornecedor.Close;
-  end
-  else
-  begin
-    FormCadastroFornecedor.Refresh;
   end;
 end;
 

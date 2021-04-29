@@ -12,6 +12,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -33,7 +34,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Top = 17
       Width = 547
       Height = 197
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
@@ -101,7 +102,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Width = 65
       Height = 24
       DataField = 'id'
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 0
     end
     object txtNome: TDBEdit
@@ -110,7 +111,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Width = 281
       Height = 24
       DataField = 'nome'
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 1
     end
   end
@@ -246,6 +247,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFE8E8E8D1D1D1BDBDBDB5B5B5B5B5B5BDBDBDD2D2D2E8
         E8E8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnNovoClick
     end
     object btnGravar: TSpeedButton
       Left = 111
@@ -722,6 +724,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFFFFFFF939393ACACACBABABACACACADADADAE9E9E9F8
         F8F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnSairClick
     end
   end
   object txtMaskCnpj: TMaskEdit
@@ -737,5 +740,24 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
     ParentFont = False
     TabOrder = 3
     Text = ''
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ConexoesBD.tbFornecedores
+    ScopeMappings = <>
+    Left = 272
+    Top = 200
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cnpj'
+      Control = txtMaskCnpj
+      Track = False
+    end
   end
 end

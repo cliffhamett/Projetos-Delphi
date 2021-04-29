@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.Client;
 
 type
-  TConexoesBD = class(TDataModule)
+  TDataModule1 = class(TDataModule)
     ConexãoBD: TFDConnection;
     tbFornecedores: TFDTable;
     DSFornecedores: TDataSource;
@@ -22,7 +22,7 @@ type
   end;
 
 var
-  ConexoesBD: TConexoesBD;
+  DataModule1: TDataModule1;
 
 implementation
 

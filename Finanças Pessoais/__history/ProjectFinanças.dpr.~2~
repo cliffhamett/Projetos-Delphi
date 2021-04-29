@@ -6,7 +6,7 @@ uses
   UnitCadastroFornecedor in 'UnitCadastroFornecedor.pas' {FormCadastroFornecedor},
   Vcl.Themes,
   Vcl.Styles,
-  UnitConexaoBancoDeDados in 'UnitConexaoBancoDeDados.pas' {ConexoesBD: TDataModule};
+  UnitConexaoBancoDeDados in 'UnitConexaoBancoDeDados.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
@@ -16,6 +16,6 @@ begin
   TStyleManager.TrySetStyle('Smokey Quartz Kamri');
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormCadastroFornecedor, FormCadastroFornecedor);
-  Application.CreateForm(TConexoesBD, ConexoesBD);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

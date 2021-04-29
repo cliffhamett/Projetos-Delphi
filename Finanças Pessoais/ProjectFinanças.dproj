@@ -102,7 +102,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UnitConexaoBancoDeDados.pas">
-            <Form>DataModule1</Form>
+            <Form>ConexoesBD</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

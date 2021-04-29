@@ -2,8 +2,8 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
   Left = 0
   Top = 0
   Caption = 'Cadastro de Fornecedores'
-  ClientHeight = 471
-  ClientWidth = 678
+  ClientHeight = 394
+  ClientWidth = 562
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,9 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBoxFornecedoresCadastrados: TGroupBox
@@ -31,7 +34,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Top = 17
       Width = 547
       Height = 197
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
@@ -99,7 +102,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Width = 65
       Height = 24
       DataField = 'id'
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 0
     end
     object txtNome: TDBEdit
@@ -108,16 +111,8 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       Width = 281
       Height = 24
       DataField = 'nome'
-      DataSource = DataModule1.DSFornecedores
+      DataSource = ConexoesBD.DSFornecedores
       TabOrder = 1
-    end
-    object txtMaskCnpj: TMaskEdit
-      Left = 407
-      Top = 52
-      Width = 138
-      Height = 24
-      TabOrder = 2
-      Text = ''
     end
   end
   object PainelBotoes: TPanel
@@ -252,6 +247,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFE8E8E8D1D1D1BDBDBDB5B5B5B5B5B5BDBDBDD2D2D2E8
         E8E8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnNovoClick
     end
     object btnGravar: TSpeedButton
       Left = 111
@@ -730,17 +726,31 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       NumGlyphs = 2
     end
   end
+  object txtMaskCnpj: TMaskEdit
+    Left = 415
+    Top = 275
+    Width = 138
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    Text = ''
+  end
   object BindSourceDB1: TBindSourceDB
-    DataSet = DataModule1.tbFornecedores
+    DataSet = ConexoesBD.tbFornecedores
     ScopeMappings = <>
-    Left = 592
-    Top = 32
+    Left = 272
+    Top = 200
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 596
-    Top = 85
+    Left = 20
+    Top = 5
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1

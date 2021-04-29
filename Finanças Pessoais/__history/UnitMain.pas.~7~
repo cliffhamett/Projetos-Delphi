@@ -15,7 +15,6 @@ type
     Fornecedores1: TMenuItem;
     Clientes1: TMenuItem;
     procedure Fornecedores1Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -30,22 +29,6 @@ implementation
 {$R *.dfm}
 
 uses UnitCadastroFornecedor;
-
-procedure TFormMain.FormClose(Sender: TObject; var Action: TCloseAction);
-var
-  RetornoMensagemDlg : integer;
-begin
-  RetornoMensagemDlg := Messagedlg('Tem certeza que deseja fechar o programa?', mtConfirmation, [mbYes, mbNo], 0);
-
-  if RetornoMensagemDlg = 6 then
-  begin
-    FormCadastroFornecedor.Close;
-  end
-  else
-  begin
-    FormCadastroFornecedor.Refresh;
-  end;
-end;
 
 procedure TFormMain.Fornecedores1Click(Sender: TObject);
 begin

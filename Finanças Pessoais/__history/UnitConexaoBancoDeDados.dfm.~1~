@@ -1,4 +1,4 @@
-﻿object ConexoesBD: TConexoesBD
+﻿object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 579
   Width = 1027

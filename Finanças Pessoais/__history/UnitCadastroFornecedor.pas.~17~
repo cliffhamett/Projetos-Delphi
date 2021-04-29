@@ -29,6 +29,8 @@ type
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkControlToField1: TLinkControlToField;
+    procedure FormCreate(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,5 +45,15 @@ implementation
 {$R *.dfm}
 
 uses UnitConexaoBancoDeDados;
+
+procedure TFormCadastroFornecedor.btnNovoClick(Sender: TObject);
+begin
+  ConexoesBD.tbFornecedores.Insert;
+end;
+
+procedure TFormCadastroFornecedor.FormCreate(Sender: TObject);
+begin
+  txtMaskCnpj.EditMask := '99.999.999/9999-99';
+end;
 
 end.
