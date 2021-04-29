@@ -1,0 +1,112 @@
+unit UnitCalculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Valor1: TEdit;
+    Valor2: TEdit;
+    Label3: TLabel;
+    Resultado: TEdit;
+    Label4: TLabel;
+    btnSomar: TButton;
+    btnSubtrair: TButton;
+    btnDividirInteiro: TButton;
+    btnMultiplicar: TButton;
+    btnDividirFlutuante: TButton;
+    procedure btnSomarClick(Sender: TObject);
+    procedure btnSubtrairClick(Sender: TObject);
+    procedure btnDividirInteiroClick(Sender: TObject);
+    procedure btnMultiplicarClick(Sender: TObject);
+    procedure btnDividirFlutuanteClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    function somar(Valor1, Valor2 : Integer) : Integer ;
+    function subtrair(Valor1, Valor2 : Integer) : Integer;
+    function multiplicar(Valor1, Valor2 : Integer) : Integer;
+    function dividirInteiro(Valor1, Valor2 : Integer) : Integer;
+    function dividirFlutuante(Valor1, Valor2 : Currency) : Currency;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnDividirFlutuanteClick(Sender: TObject);
+var
+  ResultadoDivisaoFlutuante : Currency;
+begin
+  ResultadoDivisaoFlutuante     := dividirFlutuante(StrToCurr(Valor1.Text), StrToCurr(Valor2.Text));
+  Resultado.Text                := CurrToStr(ResultadoDivisaoFlutuante);
+end;
+
+procedure TForm1.btnDividirInteiroClick(Sender: TObject);
+var
+  ResultadoDivisaoInteiro : Integer;
+begin
+  ResultadoDivisaoInteiro       := dividirInteiro(StrToInt(Valor1.Text), StrToInt(Valor2.Text));
+  Resultado.Text                := IntToStr(ResultadoDivisaoInteiro);
+end;
+
+procedure TForm1.btnMultiplicarClick(Sender: TObject);
+var
+  ResultadoMultiplicacao : Integer;
+begin
+  ResultadoMultiplicacao        := multiplicar(StrToint(Valor1.Text), StrToInt(Valor2.Text));
+  Resultado.Text                := IntToStr(ResultadoMultiplicacao);
+end;
+
+procedure TForm1.btnSomarClick(Sender: TObject);
+var
+  ResultadoSoma : Integer;
+
+begin
+  ResultadoSoma                 := somar(StrToInt(Valor1.Text), StrToInt(Valor2.Text));
+  Resultado.Text                := IntToStr(ResultadoSoma);
+end;
+
+procedure TForm1.btnSubtrairClick(Sender: TObject);
+var
+  ResultadoSubtracao : Integer;
+begin
+  ResultadoSubtracao            := subtrair(StrToInt(Valor1.Text), StrToInt(Valor2.Text));
+  Resultado.Text                := IntToStr(ResultadoSubtracao);
+end;
+
+function TForm1.dividirFlutuante(Valor1: Currency; Valor2: Currency) : Currency;
+begin
+  Result := Valor1 / Valor2;
+end;
+
+function TForm1.multiplicar(Valor1: Integer; Valor2: Integer) : Integer;
+begin
+  Result := Valor1 * Valor2;
+end;
+
+function TForm1.dividirInteiro(Valor1, Valor2: Integer): Integer;
+begin
+  Result := Valor1 div Valor2;
+  //Para dividir valores inteiros, deve ser usado "div" ao invés de "/"
+end;
+
+function TForm1.somar(Valor1: Integer; Valor2: Integer) : Integer;
+begin
+  Result := Valor1 + Valor2;
+end;
+
+function Tform1.subtrair(Valor1: Integer; Valor2: Integer) : Integer;
+begin
+  Result := Valor1 - Valor2;
+end;
+
+end.

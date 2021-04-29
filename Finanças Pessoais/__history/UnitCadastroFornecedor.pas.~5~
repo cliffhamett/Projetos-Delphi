@@ -1,0 +1,42 @@
+unit UnitCadastroFornecedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Data.DB, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+
+type
+  TFormCadastroFornecedor = class(TForm)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    GroupBoxFornecedoresCadastrados: TGroupBox;
+    labelCodigo: TLabel;
+    labelNomeFornecedor: TLabel;
+    labelCnpj: TLabel;
+    GroupBoxInformacoesParaCadastro: TGroupBox;
+    PainelBotoes: TPanel;
+    DBGrid1: TDBGrid;
+    btnNovo: TSpeedButton;
+    btnGravar: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    btnSair: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCadastroFornecedor: TFormCadastroFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitConexaoBancoDeDados;
+
+end.

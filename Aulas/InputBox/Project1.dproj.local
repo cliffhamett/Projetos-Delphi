@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/04/26 19:18:51.205,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/04/26 19:23:10.616,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox.dfm=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/04/26 19:23:10.616,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox.pas=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/04/26 19:31:42.859,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox\Project1.dproj=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/04/26 19:32:45.989,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\Project1.pas=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox.pas</Transaction>
+    <Transaction>2021/04/26 19:32:45.989,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\Project1.dfm=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox.dfm</Transaction>
+    <Transaction>2021/04/26 19:35:51.723,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\Project1.pas=</Transaction>
+    <Transaction>2021/04/26 19:36:00.041,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Aulas\InputBox\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

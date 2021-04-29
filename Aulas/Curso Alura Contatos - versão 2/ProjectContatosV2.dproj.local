@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/04/24 11:14:12.000.618,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/04/24 11:21:14.000.441,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\UnitContatos.pas</Transaction>
+    <Transaction>2021/04/24 11:21:14.000.441,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\UnitContatos.dfm</Transaction>
+    <Transaction>2021/04/24 11:21:23.000.845,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\ProjectContatosV2.dproj</Transaction>
+    <Transaction>2021/04/24 14:42:05.000.471,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\Unit2.pas</Transaction>
+    <Transaction>2021/04/24 14:45:25.000.462,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\UnitFormulárioPrincipal.pas=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\Unit2.pas</Transaction>
+    <Transaction>2021/04/24 14:45:25.000.462,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\UnitFormulárioPrincipal.dfm=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Curso Alura Contatos - versão 2\Unit2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
