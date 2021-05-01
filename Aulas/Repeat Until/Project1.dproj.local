@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/05/01 13:10:43.000.809,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/01 13:12:48.000.551,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Unit1.pas</Transaction>
+    <Transaction>2021/05/01 13:12:48.000.551,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Unit1.dfm</Transaction>
+    <Transaction>2021/05/01 13:12:50.000.603,C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Project1.dproj</Transaction>
+    <Transaction>2021/05/01 13:24:17.805,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Repeat Until\Unit1.dfm=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Unit1.dfm</Transaction>
+    <Transaction>2021/05/01 13:24:17.805,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Repeat Until\Unit1.pas=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Unit1.pas</Transaction>
+    <Transaction>2021/05/01 13:24:40.924,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Repeat Until\Project1.dproj=C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\While Do\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
