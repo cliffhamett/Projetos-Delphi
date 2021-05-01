@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/05/01 12:37:22.346,=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/01 12:38:51.312,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Try Except\Unit1.dfm=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/05/01 12:38:51.312,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Try Except\Unit1.pas=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/01 12:38:53.717,C:\Users\cliff\Documents\GitHub\Projetos-Delphi\Aulas\Try Except\Project1.dproj=C:\Users\cliff\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
