@@ -33,6 +33,11 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSairClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure limpaCampos;
+    procedure btnCancelarClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,16 +51,53 @@ implementation
 
 {$R *.dfm}
 
-uses UnitConexaoBancoDeDados;
+uses UnitConexaoBancoDeDados, UnitMain;
+
+procedure TFormCadastroFornecedor.limpaCampos;
+begin
+  txtNome.Text      := '';
+  txtMaskCnpj.Text  := '';
+end;
+
+procedure TFormCadastroFornecedor.btnCancelarClick(Sender: TObject);
+begin
+  limpaCampos;
+  txtCodigo.SetFocus;
+end;
+
+procedure TFormCadastroFornecedor.btnExcluirClick(Sender: TObject);
+var
+  retornoMensagen : integer;
+begin
+  retornoMensagen := MessageDlg('Confirma a exclusão do registro?', mtConfirmation, [mbYes, mbNo], 0);
+  if retornoMensagen = 6 then
+  begin
+    ConexoesBD.tbFornecedores.Delete;
+  end;
+end;
+
+procedure TFormCadastroFornecedor.btnGravarClick(Sender: TObject);
+begin
+  FormMain.validaCampoObrigatório(txtNome.Text);
+  ConexoesBD.tbFornecedores.Post;
+  txtCodigo.SetFocus;
+end;
 
 procedure TFormCadastroFornecedor.btnNovoClick(Sender: TObject);
 begin
   ConexoesBD.tbFornecedores.Insert;
-end;
+  txtNome.SetFocus;
+  limpaCampos;
+  end;
 
 procedure TFormCadastroFornecedor.btnSairClick(Sender: TObject);
 begin
   FormCadastroFornecedor.Close;
+end;
+
+procedure TFormCadastroFornecedor.DBGrid1DblClick(Sender: TObject);
+begin
+  ConexoesBD.tbFornecedores.Edit;
 end;
 
 procedure TFormCadastroFornecedor.FormClose(Sender: TObject;
@@ -66,7 +108,7 @@ end;
 
 procedure TFormCadastroFornecedor.FormCreate(Sender: TObject);
 begin
-  txtMaskCnpj.EditMask := '99.999.999/9999-99';
+  txtMaskCnpj.EditMask := '99.999.99/9999-99';
 end;
 
 end.

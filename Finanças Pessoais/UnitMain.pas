@@ -19,7 +19,7 @@ type
   private
     { Private declarations }
   public
-    { Public declarations }
+    procedure validaCampoObrigatório(Valor : string);
   end;
 
 var
@@ -52,6 +52,18 @@ begin
   FormCadastroFornecedor := TFormCadastroFornecedor.Create(self);
   FormCadastroFornecedor.ShowModal;
   FreeAndNil(FormCadastroFornecedor);
+  FormCadastroFornecedor.txtCodigo.SetFocus;
+end;
+
+procedure TFormMain.validaCampoObrigatório(Valor: string);
+var
+  valorRecebido : string;
+begin
+  valorRecebido := Valor;
+  if ValorRecebido = '' then
+  begin
+    MessageDlg('Campo obrigatório não informado', mtConfirmation, [mbOK], 0);
+  end;
 end;
 
 end.

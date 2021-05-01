@@ -4946,8 +4946,8 @@ object FormMain: TFormMain
       20100804020FFFD9}
   end
   object MainMenu1: TMainMenu
-    Left = 640
-    Top = 216
+    Left = 856
+    Top = 8
     object Cadastros1: TMenuItem
       Caption = 'Cadastros'
       object Fornecedores1: TMenuItem

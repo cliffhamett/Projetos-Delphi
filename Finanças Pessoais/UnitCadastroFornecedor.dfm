@@ -41,6 +41,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
       TitleFont.Height = -13
       TitleFont.Name = 'Arial'
       TitleFont.Style = []
+      OnDblClick = DBGrid1DblClick
       Columns = <
         item
           Expanded = False
@@ -367,6 +368,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnGravarClick
     end
     object btnExcluir: TSpeedButton
       Left = 206
@@ -486,6 +488,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnExcluirClick
     end
     object btnCancelar: TSpeedButton
       Left = 301
@@ -605,6 +608,7 @@ object FormCadastroFornecedor: TFormCadastroFornecedor
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
+      OnClick = btnCancelarClick
     end
     object btnSair: TSpeedButton
       Left = 445
