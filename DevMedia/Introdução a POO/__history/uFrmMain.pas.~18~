@@ -118,11 +118,11 @@ end;
 procedure TFrmExemplo.FormCreate(Sender: TObject);
 begin
   EdtDescCarro.Text     := 'Ford Ka';
-  EdtCapCarro.Text      := '5';
-  EdtQuilometragem.Text := '11000';
+  EdtCapCarro.Text      := 5;
+  EdtQuilometragem.Text := 11000;
   EdtDescAviao.Text     := 'Airbus A370';
-  EdtCapAviao.Text      := '350';
-  EdtHorasVoo.Text      := '5000';
+  EdtCapAviao.Text      := 350;
+  EdtHorasVoo.Text      := 5000;
 end;
 
 end.

@@ -10,21 +10,9 @@ TCarro = class(TMeioTransporte)
 // Os campos Descricao e Capacidade serão agora herdados de MeioTransporte
 //Descricao : string;
 //Capacidade : integer;
-
-private
-FQuilometragem : integer;
-function GetQuilometragem: integer;
-procedure SetQuilometragem(const Value : integer);
-
-protected
-procedure Ligar(); override;
-
-public
+Quilometragem : integer;
 procedure Mover(); override;
-
-published
-property Quilometragem: integer
-read GetQuilometragem write SetQuilometragem;
+procedure Ligar(); override;
 constructor create();
 end;
 
@@ -36,11 +24,6 @@ constructor TCarro.create();
 begin
   inherited; // chama o construtor da classe base
   Quilometragem := 0;
-end;
-
-function TCarro.GetQuilometragem(): integer;
-begin
-  result := FQuilometragem;
 end;
 
 procedure TCarro.Ligar();
@@ -55,18 +38,6 @@ procedure TCarro.Mover();
 begin
   inherited; // isso vai chamar o ligar
   ShowMessage(Descricao+' entrou em movimento.');
-end;
-
-procedure TCarro.SetQuilometragem(const Value: integer);
-begin
-  if Value < 0 then
-  begin
-    FQuilometragem := 0
-  end
-  else
-  begin
-    FQuilometragem := Value;
-  end;
 end;
 
 end.

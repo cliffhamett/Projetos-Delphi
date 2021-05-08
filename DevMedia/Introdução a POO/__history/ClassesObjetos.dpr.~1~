@@ -2,8 +2,7 @@ program ClassesObjetos;
 
 uses
   Vcl.Forms,
-  uFrmMain in 'uFrmMain.pas' {FrmExemplo},
-  uMeioTransporte in 'uMeioTransporte.pas';
+  uFrmMain in 'uFrmMain.pas' {FrmExemplo};
 
 {$R *.res}
 

@@ -8,7 +8,7 @@ type
 TAviao = class(TMeioTransporte)
 
 private
-FHorasVoo : integer;
+HorasVoo : integer;
 function GetHorasVoo: integer;
 procedure SetHorasVoo(const Value: integer);
 

@@ -11,7 +11,6 @@ object FrmExemplo: TFrmExemplo
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -54,7 +53,7 @@ object FrmExemplo: TFrmExemplo
       Top = 55
       Width = 121
       Height = 21
-      TabOrder = 2
+      TabOrder = 1
     end
     object Button3: TButton
       Left = 16
@@ -62,7 +61,7 @@ object FrmExemplo: TFrmExemplo
       Width = 75
       Height = 25
       Caption = 'Criar'
-      TabOrder = 3
+      TabOrder = 2
       OnClick = Button3Click
     end
     object Button4: TButton
@@ -71,25 +70,16 @@ object FrmExemplo: TFrmExemplo
       Width = 75
       Height = 25
       Caption = 'Liberar'
-      TabOrder = 4
+      TabOrder = 3
       OnClick = Button4Click
     end
-    object EdtCapCarro: TEdit
-      Left = 176
-      Top = 55
-      Width = 121
-      Height = 21
-      TabOrder = 1
-    end
-    object Button5: TButton
-      Left = 272
-      Top = 82
-      Width = 75
-      Height = 25
-      Caption = 'Mover'
-      TabOrder = 5
-      OnClick = Button5Click
-    end
+  end
+  object EdtCapCarro: TEdit
+    Left = 184
+    Top = 63
+    Width = 121
+    Height = 21
+    TabOrder = 1
   end
   object GroupBox2: TGroupBox
     Left = 8
@@ -97,7 +87,7 @@ object FrmExemplo: TFrmExemplo
     Width = 481
     Height = 130
     Caption = 'Avi'#227'o'
-    TabOrder = 1
+    TabOrder = 2
     object Label4: TLabel
       Left = 16
       Top = 37
@@ -157,15 +147,6 @@ object FrmExemplo: TFrmExemplo
       Caption = 'Liberar'
       TabOrder = 4
       OnClick = Button2Click
-    end
-    object Button6: TButton
-      Left = 272
-      Top = 83
-      Width = 75
-      Height = 25
-      Caption = 'Mover'
-      TabOrder = 5
-      OnClick = Button6Click
     end
   end
 end

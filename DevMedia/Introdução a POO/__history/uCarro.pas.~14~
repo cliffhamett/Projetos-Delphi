@@ -1,0 +1,37 @@
+unit uCarro;
+
+interface
+
+uses Dialogs, UMeioTransporte;
+
+type
+// Tcarro agora herda de MeioTransporte:
+TCarro = class(TMeioTransporte)
+// Os campos Descricao e Capacidade serão agora herdados de MeioTransporte
+//Descricao : string;
+//Capacidade : integer;
+Quilometragem : integer;
+procedure Mover(); override;
+procedure Ligar(); override;
+end;
+
+implementation
+
+{ TCarro }
+
+procedure TCarro.Ligar();
+begin
+  // inherited não será usado, pois não existe nada implementado na classe base
+  //inherited;
+  ShowMessage('Ligado o carro ' + Descricao);
+
+end;
+
+procedure TCarro.Mover();
+begin
+  inherited;
+  ShowMessage(Descricao+' entrou em movimento.');
+end;
+
+end.
+

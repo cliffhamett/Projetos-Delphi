@@ -34,12 +34,11 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
-//  Carro : TCarro;
-//  Aviao : TAviao;
+  Carro : TCarro;
+  Aviao : TAviao;
 
   Carro,Aviao : TMeioTransporte;
   end;
@@ -68,7 +67,7 @@ begin
 
   if EdtHorasVoo.Text <> '' then
   begin
-    TAviao(Aviao).HorasVoo := StrToIntDef(EdtHorasVoo.Text,0);
+    Aviao.HorasVoo := StrToIntDef(EdtHorasVoo.Text,0);
   end;
 end;
 
@@ -94,7 +93,7 @@ begin
 
   if EdtQuilometragem.Text <> '' then
   begin
-    Tcarro(Carro).Quilometragem := StrToIntDef(EdtQuilometragem.Text,0);
+    Carro.Quilometragem := StrToIntDef(EdtQuilometragem.Text,0);
   end;
 
 
@@ -113,16 +112,6 @@ end;
 procedure TFrmExemplo.Button6Click(Sender: TObject);
 begin
   Aviao.Mover;
-end;
-
-procedure TFrmExemplo.FormCreate(Sender: TObject);
-begin
-  EdtDescCarro.Text     := 'Ford Ka';
-  EdtCapCarro.Text      := '5';
-  EdtQuilometragem.Text := '11000';
-  EdtDescAviao.Text     := 'Airbus A370';
-  EdtCapAviao.Text      := '350';
-  EdtHorasVoo.Text      := '5000';
 end;
 
 end.

@@ -34,7 +34,6 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -113,16 +112,6 @@ end;
 procedure TFrmExemplo.Button6Click(Sender: TObject);
 begin
   Aviao.Mover;
-end;
-
-procedure TFrmExemplo.FormCreate(Sender: TObject);
-begin
-  EdtDescCarro.Text     := 'Ford Ka';
-  EdtCapCarro.Text      := '5';
-  EdtQuilometragem.Text := '11000';
-  EdtDescAviao.Text     := 'Airbus A370';
-  EdtCapAviao.Text      := '350';
-  EdtHorasVoo.Text      := '5000';
 end;
 
 end.

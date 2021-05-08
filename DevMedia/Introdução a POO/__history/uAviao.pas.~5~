@@ -1,0 +1,22 @@
+unit uAviao;
+
+interface
+
+uses Dialogs, uMeioTransporte;
+
+type
+TAviao = class(TMeioTransporte)
+HorasVoo : integer;
+procedure Mover();
+end;
+
+implementation
+
+{ TAviao }
+
+procedure TAviao.Mover;
+begin
+  ShowMessage(Descricao+' está voando.');
+end;
+
+end.

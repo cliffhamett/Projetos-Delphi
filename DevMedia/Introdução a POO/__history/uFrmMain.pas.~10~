@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uCarro, uAviao, uMeioTransporte;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uCarro, uAviao;
 
 type
   TFrmExemplo = class(TForm)
@@ -26,22 +26,14 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
-    Button5: TButton;
-    Button6: TButton;
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button5Click(Sender: TObject);
-    procedure Button6Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
-//  Carro : TCarro;
-//  Aviao : TAviao;
-
-  Carro,Aviao : TMeioTransporte;
+  Carro : TCarro;
+  Aviao : TAviao;
   end;
 
 var
@@ -68,13 +60,8 @@ begin
 
   if EdtHorasVoo.Text <> '' then
   begin
-    TAviao(Aviao).HorasVoo := StrToIntDef(EdtHorasVoo.Text,0);
+    Aviao.HorasVoo := StrToIntDef(EdtHorasVoo.Text,0);
   end;
-end;
-
-procedure TFrmExemplo.Button2Click(Sender: TObject);
-begin
-  Aviao.Free; //ou FreeAndNil(Aviao)
 end;
 
 procedure TFrmExemplo.Button3Click(Sender: TObject);
@@ -94,7 +81,7 @@ begin
 
   if EdtQuilometragem.Text <> '' then
   begin
-    Tcarro(Carro).Quilometragem := StrToIntDef(EdtQuilometragem.Text,0);
+    Carro.Quilometragem := StrToIntDef(EdtQuilometragem.Text,0);
   end;
 
 
@@ -103,26 +90,6 @@ end;
 procedure TFrmExemplo.Button4Click(Sender: TObject);
 begin
   Carro.Free; //ou FreeAndNil(Carro)
-end;
-
-procedure TFrmExemplo.Button5Click(Sender: TObject);
-begin
-  Carro.Mover;
-end;
-
-procedure TFrmExemplo.Button6Click(Sender: TObject);
-begin
-  Aviao.Mover;
-end;
-
-procedure TFrmExemplo.FormCreate(Sender: TObject);
-begin
-  EdtDescCarro.Text     := 'Ford Ka';
-  EdtCapCarro.Text      := '5';
-  EdtQuilometragem.Text := '11000';
-  EdtDescAviao.Text     := 'Airbus A370';
-  EdtCapAviao.Text      := '350';
-  EdtHorasVoo.Text      := '5000';
 end;
 
 end.

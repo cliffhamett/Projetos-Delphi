@@ -1,0 +1,33 @@
+unit uMeioTransporte;
+
+interface
+
+uses Dialogs;
+
+type
+TMeioTransporte = class
+Descricao : string;
+Capacidade : integer;
+procedure Mover();  virtual;
+procedure Ligar(); virtual; abstract;
+constructor create();
+destructor destroy; override;
+end;
+
+implementation
+
+{ TMeioTransporte}
+
+constructor TMeioTransporte.create;
+begin
+  inherited;
+  Capacidade := 0;
+  Descricao := 'Sem nome';
+end;
+
+procedure TMeioTransporte.Mover();
+begin
+  Ligar();
+end;
+
+end.

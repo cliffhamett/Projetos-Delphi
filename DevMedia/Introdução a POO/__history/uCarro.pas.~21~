@@ -12,7 +12,7 @@ TCarro = class(TMeioTransporte)
 //Capacidade : integer;
 
 private
-FQuilometragem : integer;
+Quilometragem : integer;
 function GetQuilometragem: integer;
 procedure SetQuilometragem(const Value : integer);
 

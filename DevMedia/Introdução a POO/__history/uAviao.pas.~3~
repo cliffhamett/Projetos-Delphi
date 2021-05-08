@@ -1,0 +1,16 @@
+unit uAviao;
+
+interface
+
+uses Dialogs;
+
+type
+TAviao = class
+Descricao : string;
+Capacidade : integer;
+HorasVoo : integer;
+end;
+
+implementation
+
+end.

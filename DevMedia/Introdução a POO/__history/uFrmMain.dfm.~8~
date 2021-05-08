@@ -11,7 +11,6 @@ object FrmExemplo: TFrmExemplo
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -81,15 +80,6 @@ object FrmExemplo: TFrmExemplo
       Height = 21
       TabOrder = 1
     end
-    object Button5: TButton
-      Left = 272
-      Top = 82
-      Width = 75
-      Height = 25
-      Caption = 'Mover'
-      TabOrder = 5
-      OnClick = Button5Click
-    end
   end
   object GroupBox2: TGroupBox
     Left = 8
@@ -157,15 +147,6 @@ object FrmExemplo: TFrmExemplo
       Caption = 'Liberar'
       TabOrder = 4
       OnClick = Button2Click
-    end
-    object Button6: TButton
-      Left = 272
-      Top = 83
-      Width = 75
-      Height = 25
-      Caption = 'Mover'
-      TabOrder = 5
-      OnClick = Button6Click
     end
   end
 end

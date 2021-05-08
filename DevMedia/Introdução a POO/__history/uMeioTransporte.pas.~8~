@@ -1,0 +1,24 @@
+unit uMeioTransporte;
+
+interface
+
+uses Dialogs;
+
+type
+TMeioTransporte = class
+Descricao : string;
+Capacidade : integer;
+procedure Mover();  virtual;
+procedure Ligar(); virtual; abstract;
+end;
+
+implementation
+
+{ TMeioTransporte}
+
+procedure TMeioTransporte.Mover();
+begin
+  Ligar();
+end;
+
+end.

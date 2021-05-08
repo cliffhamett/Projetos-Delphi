@@ -12,9 +12,9 @@ TCarro = class(TMeioTransporte)
 //Capacidade : integer;
 
 private
-FQuilometragem : integer;
+Quilometragem : integer;
 function GetQuilometragem: integer;
-procedure SetQuilometragem(const Value : integer);
+procedure setQuilometragem: integer;
 
 protected
 procedure Ligar(); override;
@@ -38,11 +38,6 @@ begin
   Quilometragem := 0;
 end;
 
-function TCarro.GetQuilometragem(): integer;
-begin
-  result := FQuilometragem;
-end;
-
 procedure TCarro.Ligar();
 begin
   // inherited não será usado, pois não existe nada implementado na classe base
@@ -55,18 +50,6 @@ procedure TCarro.Mover();
 begin
   inherited; // isso vai chamar o ligar
   ShowMessage(Descricao+' entrou em movimento.');
-end;
-
-procedure TCarro.SetQuilometragem(const Value: integer);
-begin
-  if Value < 0 then
-  begin
-    FQuilometragem := 0
-  end
-  else
-  begin
-    FQuilometragem := Value;
-  end;
 end;
 
 end.
